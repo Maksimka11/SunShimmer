@@ -1,0 +1,54 @@
+﻿<Page x:Class="SunShimmer.Pages.ProvisionServiceEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SunShimmer.Pages"
+      xmlns:xl="http://schemas.xceed.com/wpf/xaml/toolkit"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ProvisionServiceEditPage" Style="{StaticResource BasePage}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Услуга" Width="300"/>
+        <ComboBox x:Name="CbService" DisplayMemberPath="ServiceName" SelectedValuePath="ServiceId" Grid.Column="1"/>
+
+        <Label Content="Цена" Grid.Row="1"/>
+        <TextBox x:Name="TbPrice" Grid.Row="1" Grid.Column="1"/>
+
+        <Label Content="Использованные товары" Grid.Row="2" Width="300"/>
+        <ComboBox x:Name="CbUsedProduct" DisplayMemberPath="ProductName" SelectedValuePath="ProductId" Grid.Column="1" Grid.Row="2"/>
+
+        <Label Content="Номер сертификата" Grid.Row="3"/>
+        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal"  HorizontalAlignment="Center">
+            <ComboBox x:Name="CbSertificate" DisplayMemberPath="SertificateId" SelectedValuePath="SertificateId" />
+            <Separator Opacity="0" Width="10"/>
+            <Button x:Name="btnClear"  Content="-" Height="40" Width="40" Click="btnClear_Click"/>
+
+        </StackPanel>
+        <Label Content="Дата продажи" Grid.Row="4"/>
+        <xl:DateTimePicker x:Name="DtpTimeOfProvision" Grid.Row="4" Grid.Column="1"/>
+
+        <Label Content="Запись" Grid.Row="5"/>
+        <ComboBox x:Name="CbRecord" DisplayMemberPath="FullName" SelectedValuePath="RecordId" Grid.Column="1" Grid.Row="5"/>
+
+
+        <Button x:Name="BtnOK"  Content="ОК" Grid.Row="6" Click="BtnOK_Click"/>
+        <Button x:Name="BtnCancel" Content="Отмена" Grid.Row="6" Grid.Column="1" Click="BtnCancel_Click"/>
+        
+    </Grid>
+</Page>

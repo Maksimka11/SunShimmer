@@ -1,0 +1,52 @@
+﻿<Page x:Class="SunShimmer.Pages.MasterEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SunShimmer.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Редактирование данных мастера" Style="{StaticResource BasePage}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image x:Name="imgMaster" Grid.RowSpan="6" Margin="10,10,10,60"/>
+        <Button x:Name="BtnLoad" Grid.Row="5" Content="Загрузить фото" Click="BtnLoad_Click" VerticalAlignment="Bottom"/>
+
+        <Label Grid.Column="1" Content="Фамилия"/>
+        <TextBox Grid.Column="2" x:Name="TbSecondName"/>
+
+        <Label Grid.Row="1" Grid.Column="1" Content="Имя"/>
+        <TextBox Grid.Row="1" Grid.Column="2" x:Name="TbFirstName"/>
+
+        <Label Grid.Row="2"  Grid.Column="1" Content="Отчество"/>
+        <TextBox Grid.Row="2" Grid.Column="2" x:Name="TbPatronymic"/>
+        
+        <Label Content="Номер телефона" Grid.Row="3" Grid.Column="1"/>
+        <TextBox x:Name="TbPhoneNumber"  MaxLength="11" Grid.Row="3" Grid.Column="2" PreviewTextInput="TbPhone_PreviewTextInput"/>
+        
+        <Label Grid.Row="4" Grid.Column="1" Content="Квалификация"/>
+        <TextBox Grid.Row="4" Grid.Column="2" x:Name="TbQualification"/>
+
+        <Label x:Name="LPrivilege" Content="Расписание" Grid.Row="5" Grid.Column="1"/>
+        <TextBox Grid.Row="5" Grid.Column="2" x:Name="TbWorkShedule"/>
+        
+        <Button x:Name="BtnOK" Click="BtnOK_Click" Content="ОК" Grid.Row="6"/>
+        <Button x:Name="BtnCancel" Click="BtnCancel_Click" Content="Отмена" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"/>
+    </Grid>
+</Page>
+

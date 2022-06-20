@@ -1,0 +1,59 @@
+﻿<Page x:Class="SunShimmer.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SunShimmer.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainPage" Style="{StaticResource BasePage}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Наши контакты:"/>
+        <Label Content="Мы в социальных сетях:" Grid.Column="2" Width="300" HorizontalAlignment="Left"/>
+
+
+        <TextBlock Padding="20" Grid.Row="1">
+                <Run FontWeight="Heavy">Телефон:</Run>
+                <Run>(843) 265-42-36</Run>
+        </TextBlock>
+        <TextBlock Padding="20" Grid.Row="2">
+                <Run FontWeight="Heavy">Время работы:</Run>
+                <Run>ПН-ПТ 09:00-20:00</Run>
+                <Run>СБ-ВС 09:00-19:00</Run>
+        </TextBlock>
+        <TextBlock Padding="20" Grid.Row="3">
+                <Run FontWeight="Heavy">Адрес:</Run>
+                <Run>г. Казань, просп. Победы, 33</Run>
+        </TextBlock>
+        <TextBlock Padding="20" Grid.Row="4">
+                <Run FontWeight="Heavy">Cпособы оплаты:</Run>
+                <Run>Visa, Master Card, QIWI, Yandex деньги</Run>
+        </TextBlock>
+
+        <Image x:Name="inst" Grid.Row="1" Grid.Column="1" Height="40" Source="/Resources/inst.png"/>
+        <Label Content="@sun__shimmer" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left"/>
+                
+        <Image x:Name="vk" Grid.Row="2" Grid.Column="1" Height="40" Source="/Resources/vk.png"/>
+        <Label Content="Студия загара Sun Shimmer" Grid.Column="2" Grid.Row="2" Width="350" HorizontalAlignment="Left"/>
+        
+        <Image x:Name="tg" Grid.Row="3" Grid.Column="1" Height="40" Source="/Resources/tg.png"/>
+        <Label Content="Sun Shimmer" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Left"/>
+        
+        <Image x:Name="yt" Grid.Row="4" Grid.Column="1" Height="40" Source="/Resources/youtube.png"/>
+        <Label Content="Все о загаре Sun Shimmer" Grid.Column="2" Grid.Row="4" Width="350" HorizontalAlignment="Left"/>
+    </Grid>
+</Page>

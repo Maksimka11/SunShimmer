@@ -1,0 +1,42 @@
+﻿<Window x:Class="SunShimmer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SunShimmer"
+        mc:Ignorable="d"
+        Title="{Binding ElementName=MainFrame, Path=Content.Title}" WindowState="Maximized" Icon="Resources/icon.ico" Closing="WindowClosing" WindowStartupLocation="CenterScreen" Style="{StaticResource BaseWindow}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Background="PeachPuff"/>
+        <Image x:Name="image" HorizontalAlignment="Center" Source="/Resources/logo.png" Margin="5" VerticalAlignment="Top"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Button x:Name="ApplicationPage" Content="Оставить заявку" Click="BtnApplication_Click" Height="40"/>
+            <Button x:Name="ClientEditPage" Content="Моя страница" Click="BtnClientEditPage_Click" Height="40"/>
+        </StackPanel>
+
+        <TextBlock Background="LightPink" Grid.Row="1"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Stretch">
+            <Button x:Name="MainPage" Content="На главную" Click="BtnMainPage_Click"/>
+            <Button x:Name="ServicePage" Content="Услуги" Click="BtnService_Click"/>
+            <Button x:Name="ProductPage" Content="Товары" Click="BtnProduct_Click"/>            
+            <Button x:Name="MasterPage" Content="Мастера" Click="BtnMaster_Click"/>
+            <Button x:Name="SertificatePage" Content="Сертификаты" Click="BtnSertificate_Click"/>
+        </StackPanel>
+
+        <Frame x:Name="Frame" Grid.Row="2" VerticalAlignment="Stretch" NavigationUIVisibility="Hidden" HorizontalAlignment="Stretch"/>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="1">
+            <Button x:Name="BtnAdmin" Content="Для админа" Width="150" Click="BtnAdmin_Click" Margin="10,0,0,0" Height="40" Visibility="Collapsed" Background="PeachPuff" Foreground="Black"/>
+            <Button x:Name="BtnUnLogin" Content="Сменить пользователя" Width="300" Click="BtnUnLogin_Click" Margin="10" Height="40" Background="PeachPuff" Foreground="Black"/>
+        </StackPanel>
+    </Grid>
+</Window>

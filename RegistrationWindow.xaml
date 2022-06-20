@@ -1,0 +1,34 @@
+﻿<Window x:Class="SunShimmer.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SunShimmer"
+        mc:Ignorable="d"
+        Title="Регистрация" Height="450" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Style="{StaticResource BaseWindow}">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Label Content="Email" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="TbEmail" Grid.Column="1"/>
+        
+        <Label Content="Пароль" Grid.Row="1" HorizontalContentAlignment="Center"/>
+        <PasswordBox x:Name="PbPassword" Grid.Row="1" Grid.Column="1"/>
+        
+        <Label Content="Подтвердите пароль" HorizontalContentAlignment="Center" Grid.Row="2"/>
+        <PasswordBox x:Name="PbPasswordAccept" Grid.Row="2" Grid.Column="1"/>
+        
+        <Button x:Name="BtnOK" Content="Создать" Click="BtnOK_Click" Grid.Row="3"/>
+        <Button x:Name="BtnCancel" Content="Отмена" Click="BtnCancel_Click" Grid.Row="3" Grid.Column="1"/>
+    </Grid>
+</Window>
